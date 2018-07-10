@@ -1,4 +1,4 @@
-package org.columbia.controller;
+ package org.columbia.controller;
 
 import org.columbia.dto.TextDto;
 import org.columbia.entity.TextEntity;
@@ -33,7 +33,7 @@ public class DemoController {
     @ResponseBody
     public ResponseEntity<?> getGreetingById(@PathVariable UUID id) {
         TextEntity entity = demoService.getTextByID(id);
-        return ResponseEntity.ok(demoService.convertTextEntityToTextIdDto(entity));
+        return rn ResponseEntity.ok(demoService.convertTextEntityToTextIdDto(entity));
     }
 
     @RequestMapping(value = "/greeting", method = RequestMethod.POST)
