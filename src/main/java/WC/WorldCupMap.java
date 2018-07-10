@@ -18,7 +18,9 @@ public class WorldCupMap {
         groupPhase.put("CRC x SRB", "0-1");
         groupPhase.put("GER x MEX", "0-1");
         groupPhase.put("BRA x SUI", "1-1");
-        groupPhase.put("")
+
+
         return groupPhase;
+
     }
 }
