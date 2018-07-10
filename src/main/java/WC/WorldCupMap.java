@@ -56,5 +56,27 @@ public class WorldCupMap {
         return groupPhase;
     }
 
+    public Map<String, String> createQuarters() {
+        Map<String, String> createQuarters = new HashMap<>();
+        createQuarters.put("URU x FRA", "0-2");
+        createQuarters.put("SWE x ENG", "0-2");
+        createQuarters.put("BRA x BEL", "1-2");
+        createQuarters.put("RUS x CRO", "2-2");
+        return createQuarters;
+    }
 
+    public Map<String, String> createSixteenPhaseMap() {
+        Map<String, String> sixteenPhase = new HashMap<>();
+        sixteenPhase.put("FRA x ARG", "4-3");
+        sixteenPhase.put("ESP x RUS", "4-5");
+        sixteenPhase.put("BRA x MEX", "2-0");
+        sixteenPhase.put("SWE x SUI", "1-0");
+        sixteenPhase.put("URU x POR", "2-1");
+        sixteenPhase.put("CRO x DEN", "4-3");
+        sixteenPhase.put("BEL x JPN", "3-2");
+        sixteenPhase.put("COL x ENG", "4-5");
+
+
+        return sixteenPhase;
+    }
 }
