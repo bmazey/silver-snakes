@@ -5,7 +5,10 @@ import java.util.Map;
 
 public class WorldCupMap {
 
-    Map<String, String> results = new HashMap<>();
+    public Map<String, String> createGroupPhaseMap() {
+        Map<String, String> groupPhase = new HashMap<>();
+        groupPhase.put("RUSxKSA", "5x0");
 
-
+        return groupPhase;
+    }
 }
