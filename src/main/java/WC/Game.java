@@ -36,7 +36,7 @@ public class Game {
             List<String> keys2      = new ArrayList<String>(Sixteenth.keySet());
             String       randomKey2 = keys2.get( random.nextInt(keys2.size()) );
             String       value2     = Sixteenth.get(randomKey2);
-            System.out.println("Match : " + randomKey2 + " , result : ");
+            System.out.print("Match : " + randomKey2 + " , result : ");
             Scanner input2 = new Scanner(System.in);
             String guess2 = input2.nextLine();
 
@@ -46,7 +46,7 @@ public class Game {
                 List<String> keys1      = new ArrayList<String>(groupPhase.keySet());
                 String       randomKey1 = keys1.get( random.nextInt(keys1.size()) );
                 String       value1     = groupPhase.get(randomKey1);
-                System.out.println("Match : " + randomKey1 + " , result : ");
+                System.out.print("Match : " + randomKey1 + " , result : ");
                 Scanner input1 = new Scanner(System.in);
                 String guess1 = input1.nextLine();
 
