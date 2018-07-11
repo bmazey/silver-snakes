@@ -3,6 +3,7 @@ package WC;
 import java.util.Scanner;
 import java.util.Random;
 import java.util.Map;
+import java.util.*;
 
 public class Game {
 
@@ -10,17 +11,29 @@ public class Game {
       private static WorldCupMap myWCMap = new WorldCupMap();
      static Map<String, String> Quarters = myWCMap.createQuarters();
      static Map<String, String> Sixteenth = myWCMap.createSixteenPhaseMap();
-     static Map<String, String> GroupPhase = myWCMap.createGroupPhaseMap();
-     private static String guess;
+     static Map<String, String> groupPhase = myWCMap.createGroupPhaseMap();
+    // private static String guess;
 
     public static void main (String[] args){
-       Random rand = new Random();
+      /* Random rand = new Random();
        int resultToGuess = rand.nextInt(4);
        Scanner input = new Scanner(System.in);
        System.out.println(Quarters.get(resultToGuess));
        guess = input.next();
+*/
 
+        Random       random    = new Random();
+        List<String> keys      = new ArrayList<String>(groupPhase.keySet());
+        String       randomKey = keys.get( random.nextInt(keys.size()) );
+        String       value     = groupPhase.get(randomKey);
+        System.out.println("Match : " + randomKey + " , result : ");
+        Scanner input = new Scanner(System.in);
+        String guess = input.nextLine();
 
+        if (guess.equals(value)){
+            System.out.println("Congrats, you got it!");
+        }
+        else { System.out.println("Sorry, wrong answer.");}
     }
 
 }
