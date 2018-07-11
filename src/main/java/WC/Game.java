@@ -26,12 +26,12 @@ public class Game {
         List<String> keys3      = new ArrayList<String>(Quarters.keySet());
         String       randomKey3 = keys3.get( random.nextInt(keys3.size()) );
         String       value3     = Quarters.get(randomKey3);
-        System.out.println("Match : " + randomKey3 + " , result : ");
+        System.out.print("Match : " + randomKey3 + " , result : ");
         Scanner input3 = new Scanner(System.in);
         String guess3 = input3.nextLine();
 
         if (guess3.equals(value3)){
-            System.out.println("Congrats, you got the first level!");
+            System.out.println("\nCongrats, you got the first level!");
 
             List<String> keys2      = new ArrayList<String>(Sixteenth.keySet());
             String       randomKey2 = keys2.get( random.nextInt(keys2.size()) );
@@ -51,13 +51,13 @@ public class Game {
                 String guess1 = input1.nextLine();
 
                 if (guess1.equals(value1)){
-                    System.out.println("Congrats, you got it all!");
+                    System.out.println("\nCongrats, you got it all!");
                 }
-                else { System.out.println("Sorry, wrong answer.");}
+                else { System.out.println("\nSorry, wrong answer.");}
             }
-            else { System.out.println("Sorry, wrong answer.");}
+            else { System.out.println("\nSorry, wrong answer.");}
         }
-        else { System.out.println("Sorry, wrong answer.");}
+        else { System.out.println("\nSorry, wrong answer.");}
     }
 
 }
