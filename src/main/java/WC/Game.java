@@ -26,14 +26,14 @@ public class Game {
         List<String> keys      = new ArrayList<String>(groupPhase.keySet());
         String       randomKey = keys.get( random.nextInt(keys.size()) );
         String       value     = groupPhase.get(randomKey);
-        System.out.println("Match : " + randomKey + " , result : ");
+        System.out.print("Match : " + randomKey + ",\nresult : ");
         Scanner input = new Scanner(System.in);
-        String guess = input.nextLine();
+        String guess = input.next();
 
         if (guess.equals(value)){
-            System.out.println("Congrats, you got it!");
+            System.out.println("\nCongrats, you got it!");
         }
-        else { System.out.println("Sorry, wrong answer. \nThe result is : " + value + " .");}
+        else { System.out.println("\nSorry, wrong answer. \nThe result is : " + value + " .");}
     }
 
 }
