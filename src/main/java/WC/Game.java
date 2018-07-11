@@ -9,18 +9,18 @@ import java.util.*;
 public class Game {
 
  private static WorldCupMap myWCMap = new WorldCupMap();
- static Map<String, String> Quarters = myWCMap.createQuarters();
- static Map<String, String> Sixteenth = myWCMap.createSixteenPhaseMap();
- static Map<String, String> groupPhase = myWCMap.createGroupPhaseMap();
+ private static Map<String, String> Quarters = myWCMap.createQuarters();
+ private static Map<String, String> Sixteenth = myWCMap.createSixteenPhaseMap();
+ private static Map<String, String> groupPhase = myWCMap.createGroupPhaseMap();
 
  private static WorldCupWinner giveWinnerMap = new WorldCupWinner();
- static Map<String, String> QuartersW = giveWinnerMap.QuartersWinner();
- static Map<String, String> SixteenthW = giveWinnerMap.SixteenWinner();
- static Map<String, String> groupPhaseW = giveWinnerMap.GroupPhaseWinner();
+ private static Map<String, String> QuartersW = giveWinnerMap.QuartersWinner();
+ private static Map<String, String> SixteenthW = giveWinnerMap.SixteenWinner();
+ private static Map<String, String> groupPhaseW = giveWinnerMap.GroupPhaseWinner();
 
     public static String gameGiver(Map<String, String> map){
         Random random = new Random();
-        List<String> keys = new ArrayList<String>(map.keySet());
+        List<String> keys = new ArrayList<>(map.keySet());
         String randomKey = keys.get(random.nextInt(keys.size()));
         String value = map.get(randomKey);
         System.out.println("Match : " + randomKey + " , result : ");
@@ -39,7 +39,7 @@ public class Game {
 
          String value5  = gameGiver(SixteenthW);
          Scanner output5 = new Scanner(System.in);
-         String guess5 = output5.nextLine();;
+         String guess5 = output5.nextLine();
 
          if (guess5.equals(value5)) {
              System.out.println("Congrats, you got the second level!");
