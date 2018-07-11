@@ -7,11 +7,11 @@ import java.util.*;
 
 public class Game {
 
-      //WorldCupMap worldCupMap;
-      private static WorldCupMap myWCMap = new WorldCupMap();
-     static Map<String, String> Quarters = myWCMap.createQuarters();
-     static Map<String, String> Sixteenth = myWCMap.createSixteenPhaseMap();
-     static Map<String, String> groupPhase = myWCMap.createGroupPhaseMap();
+    //WorldCupMap worldCupMap;
+    private static WorldCupMap myWCMap = new WorldCupMap();
+    static Map<String, String> Quarters = myWCMap.createQuarters();
+    static Map<String, String> Sixteenth = myWCMap.createSixteenPhaseMap();
+    static Map<String, String> groupPhase = myWCMap.createGroupPhaseMap();
     // private static String guess;
 
     public static void main (String[] args){
@@ -33,7 +33,7 @@ public class Game {
         if (guess.equals(value)){
             System.out.println("Congrats, you got it!");
         }
-        else { System.out.println("Sorry, wrong answer.");}
+        else { System.out.println("Sorry, wrong answer. \nThe result is : " + value + " .");}
     }
 
 }
