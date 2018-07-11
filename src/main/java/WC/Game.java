@@ -35,6 +35,7 @@ public class Game {
 
             if (guess.equals(value)) {
                 System.out.println("\nCongrats, you got it!");
+                keys.remove(randomKey);
             } else {
                 System.out.println("\nSorry, wrong answer. \nThe result is : " + value + " .");
                 i ++;
