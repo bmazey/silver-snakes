@@ -21,9 +21,10 @@ public class Game {
        System.out.println(Quarters.get(resultToGuess));
        guess = input.next();
 */
+        List<String> keys = new ArrayList<String>(groupPhase.keySet());
+
         for (int i = 0; i < 1;) {
         Random random = new Random();
-        List<String> keys = new ArrayList<String>(groupPhase.keySet());
         String randomKey = keys.get(random.nextInt(keys.size()));
         String value = groupPhase.get(randomKey);
         System.out.print("Match : " + randomKey + ",\nresult : ");
@@ -35,7 +36,8 @@ public class Game {
 
             if (guess.equals(value)) {
                 System.out.println("\nCongrats, you got it!");
-                keys.remove(randomKey);
+                keys = new ArrayList<String>(Quarters.keySet());
+                value = Quarters.get(randomKey);
             } else {
                 System.out.println("\nSorry, wrong answer. \nThe result is : " + value + " .");
                 i ++;
