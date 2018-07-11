@@ -1,12 +1,13 @@
 package WC;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class WorldCupMap {
 
     public Map<String, String> createGroupPhaseMap() {
-        Map<String, String> groupPhase = new HashMap<>();
+        Map<String, String> groupPhase = new LinkedHashMap<>();
         groupPhase.put("RUS x KSA", "5-0");
         groupPhase.put("EGY x URU", "0-1");
         groupPhase.put("MAR x IRN", "0-1");
@@ -57,7 +58,7 @@ public class WorldCupMap {
     }
 
     public Map<String, String> createQuarters() {
-        Map<String, String> createQuarters = new HashMap<>();
+        Map<String, String> createQuarters = new LinkedHashMap<>();
         createQuarters.put("URU x FRA", "0-2");
         createQuarters.put("SWE x ENG", "0-2");
         createQuarters.put("BRA x BEL", "1-2");
@@ -66,7 +67,7 @@ public class WorldCupMap {
     }
 
     public Map<String, String> createSixteenPhaseMap() {
-        Map<String, String> sixteenPhase = new HashMap<>();
+        Map<String, String> sixteenPhase = new LinkedHashMap<>();
         sixteenPhase.put("FRA x ARG", "4-3");
         sixteenPhase.put("ESP x RUS", "4-5");
         sixteenPhase.put("BRA x MEX", "2-0");
