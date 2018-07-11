@@ -1,8 +1,6 @@
 package WC;
 
-import java.util.Scanner;
-import java.util.Random;
-import java.util.Map;
+import java.util.*;
 
 public class Game {
 
@@ -14,11 +12,11 @@ public class Game {
      private static String guess;
 
     public static void main (String[] args){
-       Random rand = new Random();
-       int resultToGuess = rand.nextInt(4);
-       Scanner input = new Scanner(System.in);
-       System.out.println(Quarters.get(resultToGuess));
-       guess = input.next();
+        Random       random    = new Random();
+        List<String> keys      = new ArrayList<String>(groupPhase.keySet());
+        String       randomKey = keys.get( random.nextInt(keys.size()) );
+        String       value     = groupPhase.get(randomKey);
+        System.out.println("Match : " + randomKey + " , result : " + value);
 
 
     }
