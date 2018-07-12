@@ -18,80 +18,77 @@ public class Game {
  static Map<String, String> SixteenthW = giveWinnerMap.SixteenWinner();
  static Map<String, String> groupPhaseW = giveWinnerMap.GroupPhaseWinner();
 
- public static void main(String[] args) {
-     Random random = new Random();
+    public static String gameGiver(Map<String, String> map){
+        Random random = new Random();
+        List<String> keys = new ArrayList<String>(map.keySet());
+        String randomKey = keys.get(random.nextInt(keys.size()));
+        String value = map.get(randomKey);
+        System.out.println("Match : " + randomKey + " , result : ");
 
-     List<String> keys6 = new ArrayList<String>(QuartersW.keySet());
-     String randomKey6 = keys6.get(random.nextInt(keys6.size()));
-     String value6 = QuartersW.get(randomKey6);
-     System.out.println("Match : " + randomKey6 + " , result : ");
-     Scanner input6 = new Scanner(System.in);
-     String guess6 = input6.nextLine();
+        return value;
+    }
+
+ public static void main(String[] args) {
+
+     String value6  = gameGiver(QuartersW);
+     Scanner output6 = new Scanner(System.in);
+     String guess6 = output6.nextLine();
 
      if (guess6.equals(value6)) {
          System.out.println("Congrats, you got the first level!");
 
-         List<String> keys5 = new ArrayList<String>(SixteenthW.keySet());
-         String randomKey5 = keys5.get(random.nextInt(keys5.size()));
-         String value5 = SixteenthW.get(randomKey5);
-         System.out.println("Match : " + randomKey5 + " , result : ");
-         Scanner input5 = new Scanner(System.in);
-         String guess5 = input5.nextLine();
+         String value5  = gameGiver(SixteenthW);
+         Scanner output5 = new Scanner(System.in);
+         String guess5 = output5.nextLine();;
 
          if (guess5.equals(value5)) {
              System.out.println("Congrats, you got the second level!");
 
-             List<String> keys4 = new ArrayList<String>(groupPhaseW.keySet());
-             String randomKey4 = keys4.get(random.nextInt(keys4.size()));
-             String value4 = groupPhaseW.get(randomKey4);
-             System.out.println("Match : " + randomKey4 + " , result : ");
-             Scanner input4 = new Scanner(System.in);
-             String guess4 = input4.nextLine();
+             String value4  = gameGiver(groupPhaseW);
+             Scanner output4 = new Scanner(System.in);
+             String guess4 = output4.nextLine();
 
              if (guess4.equals(value4)) {
                  System.out.println("Congrats, you got the third level!");
 
-                 List<String> keys3 = new ArrayList<String>(Quarters.keySet());
-                 String randomKey3 = keys3.get(random.nextInt(keys3.size()));
-                 String value3 = Quarters.get(randomKey3);
-                 System.out.println("Match : " + randomKey3 + " , result : ");
-                 Scanner input3 = new Scanner(System.in);
-                 String guess3 = input3.nextLine();
+                 String value3  = gameGiver(Quarters);
+                 Scanner output3 = new Scanner(System.in);
+                 String guess3 = output3.nextLine();
 
                  if (guess3.equals(value3)) {
                      System.out.println("Congrats, you got the fourth level!");
 
-                     List<String> keys2 = new ArrayList<String>(Sixteenth.keySet());
-                     String randomKey2 = keys2.get(random.nextInt(keys2.size()));
-                     String value2 = Sixteenth.get(randomKey2);
-                     System.out.println("Match : " + randomKey2 + " , result : ");
-                     Scanner input2 = new Scanner(System.in);
-                     String guess2 = input2.nextLine();
+                     String value2  = gameGiver(Sixteenth);
+                     Scanner output2 = new Scanner(System.in);
+                     String guess2 = output2.nextLine();
 
                      if (guess2.equals(value2)) {
                          System.out.println("Congrats, you got the fifth level!");
 
-                         List<String> keys1 = new ArrayList<String>(groupPhase.keySet());
-                         String randomKey1 = keys1.get(random.nextInt(keys1.size()));
-                         String value1 = groupPhase.get(randomKey1);
-                         System.out.println("Match : " + randomKey1 + " , result : ");
-                         Scanner input1 = new Scanner(System.in);
-                         String guess1 = input1.nextLine();
+                         String value1  = gameGiver(groupPhase);
+                         Scanner output1 = new Scanner(System.in);
+                         String guess1 = output1.nextLine();
 
                          if (guess1.equals(value1)) {
                              System.out.println("Congrats, you got it all!");
                          }
-                         else { System.out.println("Sorry, wrong answer."); }
+                         else { System.out.println("Sorry, wrong answer." +
+                                 "\n" + "Here is the correct answer: " + value1); }
                         }
-                        else { System.out.println("Sorry, wrong answer."); }
+                        else { System.out.println("Sorry, wrong answer." +
+                             "\n" + "Here is the correct answer: " + value2); }
                     }
-                    else { System.out.println("Sorry, wrong answer."); }
+                    else { System.out.println("Sorry, wrong answer." +
+                         "\n" + "Here is the correct answer: " + value3); }
                 }
-                  else{ System.out.println("Sorry, wrong answer."); }
+                  else{ System.out.println("Sorry, wrong answer." +
+                     "\n" + "Here is the correct answer: " + value4); }
                 }
-                else { System.out.println("Sorry, wrong answer."); }
+                else { System.out.println("Sorry, wrong answer." +
+                 "\n" + "Here is the correct answer: " + value5); }
             }
-            else { System.out.println("Sorry, wrong answer."); }
+            else { System.out.println("Sorry, wrong answer." +
+             "\n" + "Here is the correct answer: " + value6); }
         }
 
     }
