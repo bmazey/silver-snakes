@@ -6,6 +6,8 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.*;
 
+import static javax.swing.UIManager.get;
+
 public class Game {
 
     private static WorldCupMap myWCMap = new WorldCupMap();
@@ -18,17 +20,36 @@ public class Game {
     private static Map<String, String> SixteenthW = giveWinnerMap.SixteenWinner();
     private static Map<String, String> groupPhaseW = giveWinnerMap.GroupPhaseWinner();
 
+
+
     public static String gameGiver(Map<String, String> map){
         Random random = new Random();
         List<String> keys = new ArrayList<>(map.keySet());
         String randomKey = keys.get(random.nextInt(keys.size()));
         String value = map.get(randomKey);
-        System.out.println("Match : " + randomKey + " , result : ");
-
+        System.out.print("Match : " + randomKey + " , winner : ");
         return value;
     }
 
     public static void main(String[] args) {
+        System.out.print("Choose mode (easy/hard) : ");
+        Scanner ModeChoosing = new Scanner(System.in);
+        String Mode = ModeChoosing.next();
+
+        String[] Maps = {"QuartersW", "SixteenthW", "groupPhaseW"};
+
+        if (Mode == "easy") {
+            System.out.println("Ok, in this mode you have to choose the winner of the match!\nRemember, keep your Caps lock on!!");
+            for (int i = 0; i < 1;) {
+                int m = 0;
+                Map<String, String> Phase = Maps[m];
+                gameGiver(Phase);
+
+
+            }
+
+
+        }
 
         String value6  = gameGiver(QuartersW);
         Scanner output6 = new Scanner(System.in);
