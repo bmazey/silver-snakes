@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class WorldCupWinner {
-    public Map<String, String> createGroupPhaseWinner() {
+    public Map<String, String> GroupPhaseWinner() {
         Map<String, String> groupPhase = new LinkedHashMap<>();
         groupPhase.put("RUS x KSA", "RUS");
         groupPhase.put("EGY x URU", "URU");
