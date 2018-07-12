@@ -18,22 +18,24 @@ public class testing {
 
     public void createLevels(){
         levels = new ArrayList<>();
-        levels.add(1, QuartersW);
-        levels.add(2, SixteenthW);
-        levels.add(3, groupPhaseW);
-        levels.add(4, Quarters);
-        levels.add(5, Sixteenth);
-        levels.add(6, groupPhase);
+        levels.add(0, QuartersW);
+        levels.add(1, SixteenthW);
+        levels.add(2, groupPhaseW);
+        levels.add(3, Quarters);
+        levels.add(4, Sixteenth);
+        levels.add(5, groupPhase);
     }
 
-    public static boolean gameGiver(Map<String, String> map, String guess){
+    public static boolean gameGiver(Map<String, String> map){
         Random random = new Random();
         List<String> keys = new ArrayList<String>(map.keySet());
         String randomKey = keys.get(random.nextInt(keys.size()));
         String value = map.get(randomKey);
         System.out.println("Match : " + randomKey + " , result : ");
+        Scanner output = new Scanner(System.in);
+        String type = output.nextLine();
         boolean result;
-        if (guess.equals(value)) { result = true; }
+        if (type.equals(value)) { result = true; }
         else {result = false; }
 
         return result;
@@ -43,10 +45,11 @@ public class testing {
         testing test = new testing();
         test.createLevels();
        for (Map<String, String> map : test.levels) {
-          Scanner output = new Scanner(System.in);
-
-           gameGiver(map)
-
+           boolean result = gameGiver(map);
+           if (!result) {
+               System.out.println("Sorry, you failed!");
+               break;
+           }
        }
     }
 
