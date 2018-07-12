@@ -44,7 +44,9 @@ public class testing {
     public static void main(String[] args){
         testing test = new testing();
         test.createLevels();
-           System.out.println("");
+           System.out.println("Welcome to the World Cup Guessing Game!"
+           + "\n" + "For the first three levels, you only need to guess the game winner!"
+           + "\n" + "For the last three levels you need to guess the final score!");
        for (Map<String, String> map : test.levels) {
            boolean result = gameGiver(map);
            if (!result) {
