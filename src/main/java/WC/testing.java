@@ -35,8 +35,8 @@ public class testing {
         Scanner output = new Scanner(System.in);
         String type = output.nextLine();
         boolean result;
-        if (type.equals(value)) { result = true; }
-        else {result = false; }
+        if (type.equalsIgnoreCase(value)) {result = true;}
+        else {result = false;}
 
         return result;
     }
@@ -44,6 +44,7 @@ public class testing {
     public static void main(String[] args){
         testing test = new testing();
         test.createLevels();
+           System.out.println("");
        for (Map<String, String> map : test.levels) {
            boolean result = gameGiver(map);
            if (!result) {
